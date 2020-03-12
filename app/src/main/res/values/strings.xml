@@ -4,7 +4,7 @@
     <string name="canvas">Canvas Activity</string>
     <string name="welcome">Welcome to my Color App. Please select a color below to change the background</string>
 
-    <string-array name="colorNames">
+    <string-array name="colors">
         <item>White</item>
         <item>Navy</item>
         <item>Green</item>
@@ -21,7 +21,7 @@
         <item>Silver</item>
     </string-array>
 
-    <string-array name="colors">
+    <string-array name="colorNames">
         <item>White</item>
         <item>Navy</item>
         <item>Green</item>
