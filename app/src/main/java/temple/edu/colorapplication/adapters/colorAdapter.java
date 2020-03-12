@@ -6,15 +6,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+import temple.edu.colorapplication.R;
 
 public class colorAdapter extends BaseAdapter{
 
     Context context;
     String[] colors;
+    String[] names; //second array for regional text
 
-    public colorAdapter(Context context, String[] colors) {
+    public colorAdapter(Context context, String[] colors, String[] names) {
         this.context = context;
         this.colors = colors;
+        this.names = names;
     }
 
     @Override
@@ -36,7 +39,8 @@ public class colorAdapter extends BaseAdapter{
     public View getView(int position, View convertView, ViewGroup parent) {
         TextView textView = new TextView(context);
 
-        textView.setText(colors[position]);
+        //returns translated text
+        textView.setText(names[position]);
 
         return textView;
     }
@@ -45,7 +49,7 @@ public class colorAdapter extends BaseAdapter{
     public View getDropDownView(int position, View convertView, ViewGroup parent) {
         TextView textView = new TextView(context);
 
-        textView.setText(colors[position]);
+        textView.setText(names[position]);
         textView.setBackgroundColor(Color.parseColor(colors[position]));
 
         return textView;

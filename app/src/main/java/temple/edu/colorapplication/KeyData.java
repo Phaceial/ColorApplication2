@@ -1,6 +1,6 @@
 package temple.edu.colorapplication;
 
 public class KeyData {
-    //transfers data from main activity to secondary activity
-    public static final String PALETTE_TO_CANVAS = "palette to canvas";
+    public final static String PASS_COLOR = "palette to canvas";
+    public final static String PASS_POSITION = "palette to canvas";
 }

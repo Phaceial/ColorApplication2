@@ -18,9 +18,10 @@ public class PaletteActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         final Spinner spinner = (Spinner) findViewById(R.id.colorSpinner);
-        String[] colors = getResources().getStringArray(R.array.colors);
+        final String[] colors = getResources().getStringArray(R.array.colors);
+        final String[] names = getResources().getStringArray(R.array.colorNames);
 
-        spinner.setAdapter(new colorAdapter(this, colors));
+        spinner.setAdapter(new colorAdapter(this, colors, names));
         spinner.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
 
             @Override
@@ -30,9 +31,9 @@ public class PaletteActivity extends AppCompatActivity {
                     return;
                 }
                 Intent launchCanvasIntent = new Intent(PaletteActivity.this, CanvasActivity.class);
-                String colorString = (String) spinner.getItemAtPosition((position));
+                int color = spinner.getSelectedItemPosition();
+                launchCanvasIntent.putExtra(KeyData.PASS_POSITION, color);
 
-                launchCanvasIntent.putExtra(KeyData.PALETTE_TO_CANVAS, colorString);
                 startActivity(launchCanvasIntent);
                 view.setBackgroundColor(Color.WHITE);
             }

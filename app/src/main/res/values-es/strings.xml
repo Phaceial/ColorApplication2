@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Aplicación de color</string>
+    <string name="palette">Actividad de paleta</string>
+    <string name="canvas">Actividad de lienzo</string>
+    <string name="welcome">Bienvenido a mi aplicación de color. Seleccione un color a continuación para cambiar el fondo.</string>
+
+    <string-array name="colorNames">
+        <item>Blanco</item>
+        <item>Azul marino</item>
+        <item>Verde</item>
+        <item>Rojo</item>
+        <item>Aceituna</item>
+        <item>Azul</item>
+        <item>Magenta</item>
+        <item>Gris</item>
+        <item>Morado</item>
+        <item>Cian</item>
+        <item>Amarillo</item>
+        <item>Granate</item>
+        <item>Verde azulado</item>
+        <item>Plata</item>
+    </string-array>
+</resources>

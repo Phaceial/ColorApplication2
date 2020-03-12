@@ -1,9 +1,10 @@
 <resources>
-    <string name="app_name">colorapplication</string>
+    <string name="app_name">Color Application</string>
     <string name="palette">Palette Activity</string>
     <string name="canvas">Canvas Activity</string>
     <string name="welcome">Welcome to my Color App. Please select a color below to change the background</string>
-    <array name="colors">
+
+    <string-array name="colorNames">
         <item>White</item>
         <item>Navy</item>
         <item>Green</item>
@@ -18,5 +19,22 @@
         <item>Maroon</item>
         <item>Teal</item>
         <item>Silver</item>
-    </array>
+    </string-array>
+
+    <string-array name="colors">
+        <item>White</item>
+        <item>Navy</item>
+        <item>Green</item>
+        <item>Red</item>
+        <item>Olive</item>
+        <item>Blue</item>
+        <item>Magenta</item>
+        <item>Gray</item>
+        <item>Purple</item>
+        <item>Cyan</item>
+        <item>Yellow</item>
+        <item>Maroon</item>
+        <item>Teal</item>
+        <item>Silver</item>
+    </string-array>
 </resources>
