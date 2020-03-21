@@ -10,7 +10,6 @@ import android.widget.Spinner;
 import temple.edu.colorapplication.adapters.colorAdapter;
 
 public class PaletteActivity extends AppCompatActivity {
-    boolean spinnerInitial = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,10 +25,6 @@ public class PaletteActivity extends AppCompatActivity {
 
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if(spinnerInitial){
-                    spinnerInitial = false;
-                    return;
-                }
                 Intent launchCanvasIntent = new Intent(PaletteActivity.this, CanvasActivity.class);
                 int color = spinner.getSelectedItemPosition();
                 launchCanvasIntent.putExtra(KeyData.PASS_POSITION, color);
