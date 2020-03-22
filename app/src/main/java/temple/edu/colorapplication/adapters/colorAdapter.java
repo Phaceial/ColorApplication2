@@ -48,7 +48,7 @@ public class colorAdapter extends BaseAdapter{
     @Override
     public View getDropDownView(int position, View convertView, ViewGroup parent) {
         TextView textView = new TextView(context);
-
+        //returns translated text
         textView.setText(names[position]);
         textView.setBackgroundColor(Color.parseColor(colors[position]));
 
