@@ -12,7 +12,7 @@
         <activity android:name=".CanvasActivity"
                   android:label="@string/canvas">
         </activity>
-        <activity android:name=".PaletteActivity"
+        <activity android:name=".MainActivity"
                   android:label="@string/palette">
 
             <intent-filter>

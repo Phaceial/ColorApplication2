@@ -13,15 +13,16 @@ import temple.edu.colorapplication.adapters.colorAdapter;
 
 public class PaletteFragment extends Fragment {
     private SpinnerSelectedInterface mCallback;
+    String colorString;
 
     public PaletteFragment() {
         // Required empty public constructor
     }
 
-    public static PaletteFragment newInstance(String color) {
+    public static PaletteFragment newInstance(int position) {
         PaletteFragment fragment = new PaletteFragment();
         Bundle bundle = new Bundle();
-        bundle.putString(KeyData.PASS_COLOR, color);
+        bundle.getInt(KeyData.PASS_POSITION, position);
         fragment.setArguments(bundle);
         return fragment;
     }
@@ -33,15 +34,13 @@ public class PaletteFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_palette, container, false);
         boolean spinnerInitial = true;
         final Spinner spinner = (Spinner) v.findViewById(R.id.colorSpinner);
-        final String[] colors = getResources().getStringArray(R.array.colors);
-        final String[] names = getResources().getStringArray(R.array.colorNames);
 
-        spinner.setAdapter(new colorAdapter(getActivity(), colors, names));
+        spinner.setAdapter(new colorAdapter(getActivity(), getArguments().getStringArray(KeyData.PASS_COLOR), getArguments().getStringArray(KeyData.PASS_POSITION)));
         spinner.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
 
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                mCallback.SpinnerSelected(((TextView) view).getText().toString());
+                mCallback.setCanvasColor(position);
             }
 
             @Override
@@ -53,7 +52,7 @@ public class PaletteFragment extends Fragment {
     }
 
     public interface SpinnerSelectedInterface {
-        public void SpinnerSelected(String color);
+        public void setCanvasColor(int position);
     }
 
     @Override
