@@ -2,7 +2,7 @@
     <string name="app_name">Color Application</string>
     <string name="palette">Palette Activity</string>
     <string name="canvas">Canvas Activity</string>
-    <string name="welcome">Welcome to my Color App. Please select a color below to change the background</string>
+    <string name="welcome">Welcome to my Color App. Please select a color below to change the background below.</string>
 
     <string-array name="colors">
         <item>White</item>
