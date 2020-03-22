@@ -17,6 +17,7 @@ public class CanvasFragment extends Fragment {
     private TextView displayColor;
     private Layout background;
     int id = -1;
+    private boolean spinnerInitial = true;
 
     public CanvasFragment() {
         // Required empty public constructor
@@ -38,6 +39,9 @@ public class CanvasFragment extends Fragment {
         int position = getArguments().getInt(KeyData.PASS_POSITION);
         String[] colors = getResources().getStringArray(R.array.colors);
         String[] names = getResources().getStringArray(R.array.colorNames);
+        if(spinnerInitial)
+            spinnerInitial = false;
+
         displayColor.setText(names[position]);
         v.setBackgroundColor(Color.parseColor(colors[position]));
         return v;
